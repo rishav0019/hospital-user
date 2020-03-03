@@ -1,0 +1,129 @@
+.home-container {
+  overflow-x: hidden;
+}
+
+.doctors-home {
+
+  // border: 1px solid green;
+  padding: 10px;
+  // margin-top: 100px;
+
+}
+
+
+
+.image {
+  margin-top: 20px;
+  // border: 1px solid red;
+  margin-left: 20px;
+  // padding-left: 15%;
+  // padding-right: 15%;
+
+  img {
+
+    width: 200px;
+    height: 200px;
+    // height: auto;
+
+  }
+}
+
+.about-doctor {
+  line-height: 1.8em;
+}
+
+.button {
+  width: 15em;
+  // height: 2em;
+  padding: 20px;
+  background-color: rgb(150, 204, 235);
+  // border: 1px solid red;
+}
+
+.button-box {
+  padding: 30px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.name {
+  font-size: 2rem;
+  // color: green;
+}
+
+.speciality {
+  font-size: 1.5rem;
+}
+
+.years {
+  font-size: 1.3rem;
+  color: black;
+}
+
+.degree {
+  font-size: 20px;
+  color: red;
+
+}
+
+.text-heading {
+  font-size: 1.5rem;
+  font-weight: 400;
+
+}
+
+@media (max-width: 768px) {
+  .doctors-home {
+    // border: 1px solid green;
+    // padding: 20px;
+    margin-left: 10px;
+    margin-top: 100px;
+
+  }
+
+  .image {
+
+    padding-left: 15%;
+    padding-right: 15%;
+
+    img {
+
+      width: 150px;
+      height: 150px;
+      // height: auto;
+
+    }
+  }
+
+  .name {
+    font-size: 1.5rem;
+    // color: green;
+  }
+
+  .speciality {
+    font-size: 1.2rem;
+  }
+
+  .years {
+    font-size: 1.2rem;
+    color: black;
+  }
+
+  .degree {
+    font-size: 1rem;
+    color: red;
+
+  }
+
+  .text-heading {
+    font-size: 1.2rem;
+    font-weight: 500;
+
+  }
+
+  .details {
+    font-size: 1rem;
+  }
+}

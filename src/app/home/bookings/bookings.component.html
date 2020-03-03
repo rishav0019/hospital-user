@@ -1,0 +1,184 @@
+<div class=" doctors-home">
+  <!-- <div class="col-xs-12"> -->
+  <form class="box" [formGroup]="bookingInputForm">
+    <div class="" *ngIf="doctor">
+      <div class="row ">
+        <div class="col-xs-12 col-sm-2 image">
+          <!-- <div class="box"> -->
+          <img src="{{doctor.subsImage.url}}" />
+
+          <!-- </div> -->
+
+        </div>
+        <div class="col-xs-12 col-sm-8">
+          <div class="row box">
+            <div class="col name">
+              {{doctor.name}}
+              <li class="name2 oval">{{doctor.speciality}}</li>
+
+            </div>
+          </div>
+
+          <div class="row  ">
+            <!-- <div class="col-xs-12 col-sm-2 ">
+                <span>Available On</span>
+              </div> -->
+            <div class=" col-xs-12 col-sm-12">
+              <span class="available-on">Available On</span>
+              <span class="days" *ngFor="let available of doctor.availableOn">{{available}}</span>
+            </div>
+          </div>
+          <div class="row box">
+            <div class="col-xs-12 col-lg-4">
+              <!-- <span>Choose Date</span> -->
+              <mat-form-field class="full-width">
+                <input matInput [matDatepicker]="picker" formControlName="dateSlot" placeholder="Choose a date">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row box">
+            <div class="col-xs-12 col-lg-4">
+              <span>Select timing</span>
+              <mat-form-field class="full-width">
+
+                <mat-select formControlName="timing">
+                  <!-- <mat-option>None</mat-option> -->
+                  <mat-option *ngFor="let available of doctor.timings"
+                    value=" {{available.slot}}-{{available.startTime}}-{{available.endTime}}">
+                    {{available.slot}}-{{available.startTime}}-{{available.endTime}}</mat-option>
+
+                </mat-select>
+              </mat-form-field>
+            </div>
+
+
+          </div>
+          <br>
+
+          <div class="row box">
+            <div class="col-xs-12"></div>
+            <div class="col-xs-12 name">
+              <span>Patient Details</span>
+            </div>
+          </div>
+          <div class="row box">
+            <div class="col-xs-12 col-sm-4"></div>
+            <div class="col-xs-12 col-sm-4">
+              <!-- <input type="radio" name="self" id="self" value='first' [checked]='true'
+                  (change)="selfBooking()" /><span>Self</span>
+                <input type="radio" name="self" id="self" (click)="someoneElse()" /><span>Someone Else</span> -->
+              <mat-radio-group class="full-width" aria-label="Select an option">
+                <mat-radio-button [checked]='true' value="first" (change)="selfBooking()"><span
+                    class="radio-desc">Self</span>
+                </mat-radio-button>
+                <mat-radio-button name="self" (click)="someoneElse()"><span>Someone Else</span></mat-radio-button>
+              </mat-radio-group>
+            </div>
+          </div>
+          <div class="row ">
+            <div class="col-xs-12 col-sm-6">
+
+
+              <mat-form-field class="full-width">
+                <input type="text" matInput placeholder="Patient/Visitor Name" formControlName="name">
+              </mat-form-field>
+
+            </div>
+            <div class="col-xs-12 col-sm-6">
+
+
+              <mat-form-field class="full-width">
+                <input type="text" matInput placeholder="Email" formControlName="email">
+              </mat-form-field>
+
+            </div>
+          </div>
+          <div class="row box">
+            <div class=" col-xs-12 col-sm-6">
+
+
+              <mat-form-field class="full-width">
+                <input type="text" matInput placeholder="Mobile Number" formControlName="patientMobileNumber">
+              </mat-form-field>
+
+            </div>
+            <div class="col-xs-12 col-sm-6">
+
+
+              <mat-form-field class="full-width">
+                <input type="number" matInput placeholder="Age" formControlName="age">
+              </mat-form-field>
+
+            </div>
+          </div>
+          <div class="row box">
+            <div class="col-xs-12 col-sm-6">
+
+              <mat-radio-group class="full-width" aria-label="Select an option" formControlName="gender">
+                <mat-radio-button value="Male"><span class="radio-desc">Male</span></mat-radio-button>
+                <mat-radio-button value="Fmale"><span>Female</span></mat-radio-button>
+              </mat-radio-group>
+
+            </div>
+
+
+          </div>
+          <div class="row box">
+            <div class="col-xs-12 col-sm-6">
+
+              <!-- <span>Address</span> -->
+              <mat-form-field class="full-width">
+                <input type="text" matInput placeholder="Address" formControlName="address">
+              </mat-form-field>
+
+            </div>
+            <div class="col-xs-12 col-sm-6">
+
+              <!-- <span>City</span> -->
+              <mat-form-field class="full-width">
+                <input type="text" matInput placeholder="City" formControlName="city">
+              </mat-form-field>
+            </div>
+
+          </div>
+          <div class="row box">
+
+            <div class="col-xs-12 col-sm-6">
+
+
+
+              <mat-form-field class="full-width">
+                <input type="text" matInput placeholder="State" formControlName="state">
+              </mat-form-field>
+
+            </div>
+          </div>
+          <div class="row box">
+            <div class="col-xs-12">
+              <mat-form-field class="full-width">
+                <textarea formControlName="symptoms" matInput placeholder="symptoms"></textarea>
+              </mat-form-field>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="row button-box box">
+        <div class=" col-xs-12 col-sm-4"></div>
+
+        <div class="col-xs-12 col-sm-2">
+          <button mat-raised-button color="primary" (click)="bookAppointment()" [disabled]="!bookingInputForm.valid">
+            Book Appointment
+          </button>
+        </div>
+
+
+      </div>
+    </div>
+
+
+  </form>
+</div>

@@ -1,0 +1,200 @@
+<div class="container-home ">
+  <div class="row main-image">
+
+    <div class=" text-box">
+      <div class="row ">
+        <div class="col">
+          <h1>Welcome To Ask Medic</h1>
+          <span>Your Care Is Our Concern</span>
+        </div>
+      </div>
+      <div class="row ">
+        <div class="col-lg-3 col-xs-6 text-box-button" (click)="doctors()" style="cursor:pointer;">
+          <span class=" btn-label"> Book Now</span>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+
+  <div class="row around-xs nav-button">
+    <div class="col-xs-12 col-sm-8 col-lg-4 box" style="cursor:pointer;" (click)="doctors()">
+      <div class="row main-button">
+        <div class="col-xs-2">
+          <img src="../../../assets/images/appointment3.png" />
+        </div>
+        <div class="col-xs-8">
+          <span class="btn-label">Book Appointment</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-8 col-lg-4 box" style="cursor:pointer;">
+      <div class="row main-button">
+        <div class="col-xs-2">
+          <img src="../../../assets/images/lab_test.png" />
+        </div>
+        <div class="col-xs-8">
+          <span class="btn-label"> Book Lab Test</span>
+        </div>
+      </div>
+    </div>
+
+    <div class=" col-xs-12 col-sm-8 col-lg-4 box" style="cursor:pointer;">
+      <div class="row main-button">
+        <div class="col-xs-2">
+          <img src="../../../assets/images/pharmacy.png" />
+        </div>
+        <div class="col-xs-8">
+          <span class="btn-label">Pharmacy</span>
+        </div>
+      </div>
+    </div>
+
+    <div class=" col-xs-12 col-sm-8 col-lg-4" style="cursor:pointer;">
+      <div class="row main-button">
+        <div class="col-xs-2">
+          <img src=" ../../../assets/images/vitamin_supplements.png" />
+        </div>
+        <div class="col-xs-8">
+          <span class="btn-label">Vita Supliment</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-8 col-lg-4" style="cursor:pointer;">
+      <div class="row main-button">
+        <div class="col-xs-2">
+          <img src="../../../assets/images/doctors_blog4.png" />
+        </div>
+        <div class="col-xs-8">
+          <span class="btn-label"> Doctors Blog</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-8 col-lg-4" style="cursor:pointer;">
+      <div class="row main-button">
+        <div class="col-xs-2">
+          <img src="../../../assets/images/health_tips1.png" />
+        </div>
+        <div class="col-xs-8">
+          <span class="btn-label">Health Tips</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row events">
+    <div class="col-lg-12">
+      <span>News & Events</span>
+    </div>
+  </div>
+  <div class="row slider-image">
+
+    <div class="col-xs-12 col-lg-12 image-box">
+      <ng-image-slider [images]="imageObject" [imagePopup]="false" [imageSize]="{  space: 8,width: 400, height: 300 }"
+        [infinite]="true" [autoSlide]="1" [slideImage]="1" [animationSpeed]="2" #nav>
+      </ng-image-slider>
+    </div>
+
+  </div>
+
+  <div class="features">
+    <div class="row our-services-heading">
+      <div class="col-xs-12">
+        <h2>Our Services</h2>
+        <p class="services-sub-heading">
+          We Offer Services For The Following Services
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-xs-12">
+
+        <div class="boxs">
+          <!-- <ion-icon name="infinite" class="icon-big"></ion-icon> -->
+          <h3>GENERAL SURGERY</h3>
+          <p>
+            General surgery is a surgical specialty that focuses on abdominal
+            contents including
+          </p>
+        </div>
+
+      </div>
+
+      <div class="col-lg-3 col-xs-12">
+
+        <div class="boxs">
+          <!-- <ion-icon name="stopwatch" class="icon-big"></ion-icon> -->
+          <h3>UROLOGY</h3>
+          <p>
+            Urology, also known as genitourinary surgery, is the branch of
+            medicine that
+          </p>
+        </div>
+
+      </div>
+      <div class="col-lg-3 col-xs-12">
+
+        <div class="boxs">
+          <!-- <ion-icon name="nutrition" class="icon-big"></ion-icon> -->
+          <h3>ONCO-SURGERY</h3>
+          <p>
+            Urgical oncology is the branch of surgery applied to oncology; it
+            focuses on the
+          </p>
+        </div>
+
+      </div>
+      <div class="col-lg-3 col-xs-12">
+
+        <div class="boxs">
+          <!-- <ion-icon name="cart" class="icon-big"></ion-icon> -->
+          <h3>OBSTETRICS & GYNECOLOGY</h3>
+          <p>
+            Obstetrics and gynaecology or obstetrics and gynecology is the medical
+            specialty
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="download-steps"> -->
+
+  <div class="row center-xs download-steps">
+
+    <div class="col-xs-12 col-lg-6 steps-box-image">
+      <img src="./../../../assets/images/phone_screen.jpg" alt="app-phone" class="app-screen" />
+    </div>
+    <div class=" col-xs-12 col-lg-6 steps-box-text">
+      <div class="works-step">
+        <span class="feature-heading">
+          Download the Askmedic app
+        </span>
+      </div>
+
+
+
+      <div class="works-step">
+        <ol class="feature-list">
+          <li>Book appointments and lab tests</li>
+          <li>Store health records</li>
+          <li>Read health tips</li>
+        </ol>
+      </div>
+
+
+      <a href="https://play.google.com/store/apps/details?id=com.devworkxlabs.kanchanmedico&hl=en" target="blank"
+        class="button-app"><img src="./../../../assets/images/download-app-android.png" alt="app-store-button" /></a>
+    </div>
+    <div class="col-sm-3"></div>
+  </div>
+  <!-- </div> -->
+
+</div>

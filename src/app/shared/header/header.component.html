@@ -1,0 +1,102 @@
+<div class="navbar">
+  <div class="container-nav nav-top">
+
+    <!-- <div class="row"> -->
+    <!-- <div class="col-md-12"> -->
+    <div class="navbar-content ">
+
+      <div class="navbar-left image">
+        <a routerLink="/">
+          <img src="../../../assets/images/ask_medic_logo.png" width="85" height="85" />
+
+        </a>
+      </div>
+
+
+
+
+      <div class="navbar-heading">
+
+        <a routerLink="/">
+          <h2>Ask Medic</h2>
+        </a>
+      </div>
+
+      <div class="navbar-middle">
+        <ul class="nav navbar-nav">
+
+          <li class="">
+            <a routerLink="/about">About Us</a>
+          </li>
+          <li class="log-in-out" *ngIf="isSignedIn == false">
+            <a (click)="login()">Log in</a>
+          </li>
+          <li class="">
+            <a routerLink="/account" *ngIf="isSignedIn == true">Account</a>
+          </li>
+          <li class="" *ngIf="isSignedIn == true">
+            <a routerLink="/order">Orders</a>
+          </li>
+
+
+
+
+          <li class="log-in-out" *ngIf="isSignedIn == true">
+            <a href="" (click)="logout()">Logout</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="navbar-hamburger visible-xs-block">
+
+        <button type="button" class="navbar-toggle" (click)="headerToggle()">
+
+          <fa-icon [icon]="faBars" size="2x"></fa-icon>
+
+        </button>
+
+      </div>
+
+
+    </div>
+    <!-- </div> -->
+    <!-- </div> -->
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="mobile-nav fade collapse" *ngIf="isCollapse">
+
+  <a href="#" class="mobile-close collapsed" (click)="headerToggle()">×</a>
+
+  <ul>
+    <li (click)="headerToggle()">
+      <a routerLink="/">Home</a>
+    </li>
+    <li *ngIf="isSignedIn == false" (click)="headerToggle()">
+      <a routerLink="" (click)="login()">Log in</a>
+    </li>
+    <li class="" *ngIf="isSignedIn == true" (click)="headerToggle()">
+      <a routerLink="/account">Account</a>
+    </li>
+    <li class="" *ngIf="isSignedIn == true" (click)="headerToggle()">
+      <a routerLink="/order">Orders</a>
+    </li>
+    <li class="log-in-out" *ngIf="isSignedIn == true" (click)="headerToggle()">
+      <a href="" (click)="logout()">Logout</a>
+    </li>
+  </ul>
+
+</div>

@@ -1,0 +1,141 @@
+.doctors-home {
+
+  // margin-top: 100px;
+  overflow-x: hidden;
+  // font-family: Lato, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+
+
+
+
+.image {
+  margin-top: 20px;
+  // border: 1px solid red;
+  margin-left: 30px;
+
+  img {
+    width: 150px;
+    height: 200px;
+    height: auto;
+
+  }
+}
+
+
+
+.button {
+  width: 15em;
+  height: 2em;
+  padding: 20px;
+  // border: 1px solid red;
+}
+
+.button-box {
+  padding: 30px;
+}
+
+.available-on {
+  font-size: 1rem;
+}
+
+.days {
+  // background-color: #118b0d;
+  padding: 5px;
+  font-size: 0.7rem;
+  border: 2px solid #f3f3f3;
+  margin-bottom: 20px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.name {
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+.name2 {
+  font-size: 1.5rem;
+
+  color: rgb(187, 175, 175)
+}
+
+span {
+  // padding-right: 30px;
+}
+
+.timing-color {
+  font-size: 20px;
+}
+
+.target {
+  color: red;
+}
+
+
+.oval {
+  padding: 10px;
+  width: 300px;
+  height: 50px;
+  // background: #9BE3BD;
+  border-radius: 45%;
+}
+
+
+.mat-focused .placeholder {
+  color: #00D318;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.half-width {
+  width: 30%;
+}
+
+.radio-desc {
+  padding-right: 20px;
+}
+
+
+
+@media (max-width: 768px) {
+  .doctors-home {
+    padding: 10px;
+    margin-top: 70px;
+
+  }
+
+  .days {
+    // background-color: #118b0d;
+    // padding: 2px;
+    font-size: 0.8rem;
+    border: 1px solid #f3f3f3;
+  }
+
+  .available-on {
+    font-size: 1rem;
+  }
+
+  .image {
+    margin-top: 20px;
+    // border: 1px solid red;
+    // margin-left: 20px;
+    // display: flex;
+    // margin: auto;
+    padding-left: 15%;
+    padding-right: 15%;
+
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      // height: auto;
+
+    }
+  }
+}

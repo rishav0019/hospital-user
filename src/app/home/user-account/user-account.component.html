@@ -1,0 +1,146 @@
+<div class=" wrapper">
+
+  <div class="container account-detail" *ngIf="account">
+
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="account-details">
+          <div class="header">
+            <fa-icon [icon]="faUser" size="2x"></fa-icon>
+            <h1>Account Details</h1>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <form [formGroup]="profileForm">
+      <div class="user-details">
+        <div class="row">
+          <div class="col-xs-12 col-lg-2 ">
+            <!-- <span>Name</span> -->
+          </div>
+          <div class="col-xs-12 col-lg-4">
+            <mat-form-field class="full-width">
+              <input type="displayName" placeholder="User Name" matInput formControlName="displayName">
+            </mat-form-field>
+
+          </div>
+          <div class="col-xs-12 col-lg-4">
+            <mat-form-field class=" full-width">
+              <input type="email" placeholder="Email" matInput formControlName="email">
+            </mat-form-field>
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-lg-2 ">
+            <!-- <span>Email</span> -->
+          </div>
+          <div class="col-lg-4 full-width">
+            <mat-form-field class=" full-width">
+              <input type="phoneNumber" placeholder="phonemumber" matInput formControlName="phoneNumber">
+            </mat-form-field>
+
+
+          </div>
+          <div class="col-xs-12 col-lg-4">
+            <mat-form-field class=" full-width">
+              <input type="number" placeholder="Age" matInput formControlName="age">
+            </mat-form-field>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3 col-lg-2 ">
+            <!-- <span>Gender</span> -->
+          </div>
+
+          <div class="col-xs-8 col-lg-4 full-width rodio-button">
+            <mat-radio-group aria-label="Select an option" formControlName="gender">
+              <mat-radio-button value="Male"><span>Male</span></mat-radio-button>
+              <mat-radio-button value="Fmale"><span>Female</span></mat-radio-button>
+            </mat-radio-group>
+
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-lg-2">
+            <!-- <span>Contact Number</span> -->
+          </div>
+
+          <div class="col-lg-4 full-width">
+            <mat-form-field class=" full-width">
+              <input type="text" placeholder="address" matInput formControlName="address">
+            </mat-form-field>
+
+
+          </div>
+          <div class="col-lg-4 full-width">
+            <mat-form-field class=" full-width">
+              <input type="text" placeholder="city" matInput formControlName="city">
+            </mat-form-field>
+
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-lg-2">
+            <!-- <span>Contact Number</span> -->
+          </div>
+
+          <div class="col-lg-4 full-width">
+            <mat-form-field class=" full-width">
+              <input type="text" placeholder="State" matInput formControlName="state">
+            </mat-form-field>
+
+
+          </div>
+
+        </div>
+
+        <!-- </div> -->
+        <div class="row">
+          <div class="col-lg-5"></div>
+          <div class="col-lg-3">
+            <div class="action-buttons">
+              <button mat-raised-button type="button" (click)="closeClicked()" class="btn button button-cancel">
+                Cancel
+              </button>
+              <button mat-raised-button type="button" (click)="updateAccount()" class="btn button button-save">
+                Save
+              </button>
+
+
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-xs-12 viewall-order">
+            <a href="/order">
+              <span> View All Orders</span>
+              <fa-icon [icon]="faArrowRight" size="1x"></fa-icon>
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="row logout">
+          <div class="col-lg-4 col-xs-12">
+            <a href="" (click)="logout()">
+              <span> Logout</span>
+              <fa-icon [icon]="faSignOutAlt" size="1x"></fa-icon>
+            </a>
+          </div>
+
+        </div>
+
+
+      </div>
+    </form>
+
+  </div>
+  <!-- <app-footer></app-footer> -->
+</div>

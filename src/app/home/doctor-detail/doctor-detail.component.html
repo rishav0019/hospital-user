@@ -1,0 +1,83 @@
+<div class="home-container">
+  <div class="row doctors-home">
+    <!-- <div class="col-xs-12 xx"> -->
+    <div class="" *ngIf="doctor">
+      <div class="row">
+        <!-- <div class="row"> -->
+        <div class="col-xs-2 col-sm-2 image">
+          <img src="{{doctor.subsImage.url}}" />
+
+
+        </div>
+        <div class="col-xs-10 col-sm-7 ">
+          <div class="box">
+
+            <li class="name"> {{doctor.name}}</li>
+
+            <li class="speciality">{{doctor.speciality}}</li>
+            <li class="years">{{doctor.yearOfExperience}} Year's of Experience</li>
+            <li class="degree"> {{doctor.degree}}</li>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-xs-12 col-sm-9">
+          <div class="details">
+            <!-- <li class="name"> {{doctor.name}}</li> -->
+
+
+            <span class="text-heading">Services</span>
+            <ul *ngFor="let service of doctor.services">
+              <li>{{service}}</li>
+            </ul>
+            <span class="text-heading">Experience Detail</span>
+            <ul *ngFor="let experience of doctor.experiences">
+              <li>{{experience}}</li>
+            </ul>
+            <span class="text-heading">Education Detail</span>
+            <ul *ngFor="let educationDetail of doctor.educationDetails">
+              <li>{{educationDetail}}</li>
+            </ul>
+            <span class="text-heading">Awards </span>
+            <ul *ngFor="let award of doctor.awards">
+              <li>{{award}}</li>
+            </ul>
+            <ul>
+              <!-- <li class="speciality">{{doctor.speciality}}</li> -->
+            </ul>
+            <span class="text-heading">About </span>
+            <ul>
+              <p>{{doctor.about}}</p>
+            </ul>
+            <span class="text-heading">Membership </span>
+            <ul *ngFor="let membership of doctor.memberships">
+              <li>{{membership}}</li>
+            </ul>
+            <span class="text-heading">Regno.. </span>
+            <ul>
+              <li>{{doctor.regno}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+      <div class="row button-box">
+        <div class=" col-xs-12 col-sm-6"></div>
+        <!-- <div class="col-2"> -->
+
+        <div class="col-xs-12 col-sm-4">
+          <button class="button" (click)="bookAppointment(doctor.id)" mat-raised-button>
+            Book Appointment
+          </button>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col" *ngIf="booking">
+    <h2>Appointment Details</h2>
+    <ul>
+      <li>Status - {{booking.bookingStatus}}</li>
+      <li>Slot - {{booking.timing}}</li>
+      <li>Doctor Name - {{booking.doctorName}}</li>
+      <!-- <li>Appointment Slot: -{{booking.creationDate | date:'medium'}}</li> -->
+      <li>Date - {{booking.creationDate.seconds * 1000 | date:'dd MMM yyyy'}}</li>
+
+      <li> Symtom - {{booking.symptoms}}</li>
+      <!-- <li>Patient Details</li> -->
+      <br>
+      <li> Name - {{booking.patientName}}</li>
+      <li> Age - {{booking.patientAge}}</li>
+      <li> Mob. - {{booking.patientMobileNumber}}</li>
+      <li> Email - {{booking.email}}</li>
+
+      <li> Address - {{booking.patientAddress}}</li>
+
+    </ul>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button class="btn button button-cancel" (click)="onNoClick()" cdkFocusInitial>Ok</button>
+  <!-- <button mat-raised-button class="btn button button-save" [mat-dialog-close]="true" cdkFocusInitial>Yes</button> -->
+</div>

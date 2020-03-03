@@ -1,0 +1,157 @@
+.page-container {
+  overflow-x: hidden;
+  min-height: 70vh;
+}
+
+.doctor-container {
+  margin-top: 3vh;
+}
+
+
+.card {
+  width: 400px;
+  height: auto;
+
+  background: rgba(234, 245, 243);
+  border: 1px solid rgb(1, 1, 1, 0.3);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+li {
+  list-style-type: none;
+  padding: 2px;
+
+}
+
+.image {
+
+  padding-left: 20px;
+
+  img {
+    width: 100px;
+    height: 150px;
+
+  }
+
+}
+
+.heading {
+  text-align: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+
+  .speciality {
+    font-size: 1.2rem;
+  }
+
+  .name {
+    font-size: 1.5rem;
+  }
+}
+
+
+button {
+  margin-bottom: 10px;
+}
+
+.doctor-details {
+  font-size: 1rem;
+
+  .available-on {
+    font-size: 1rem;
+    color: green;
+    // font-size: 20px;
+  }
+}
+
+.home-button {
+  margin-bottom: 15px;
+}
+
+.submit-button button {
+  // border: 2px solid rgb(0, 255, 128);
+  background: rgb(117, 157, 233);
+}
+
+// @media (max-width: 768px) {}
+@media (max-width: 768px) {
+  .card {
+    width: auto;
+    height: auto;
+    margin: 10px;
+    // border: 5px solid rgb(242, 248, 242);
+    // background: rgba(227, 240, 197, 0.829);
+
+  }
+
+  .name-heading {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  button {
+
+    // height: 50px;
+    width: auto;
+  }
+
+  .doctor-details {
+    font-size: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
+    // border: 2px solid rgb(0, 255, 128);
+
+    .available-on {
+      font-size: 1rem;
+      // color: green;
+      // font-size: 20px;
+    }
+  }
+
+
+
+  .speciality {
+    font-size: 1.4rem;
+    color: rgb(87, 189, 236);
+    // align-items: left;
+    // display: flex;
+    // justify-content: center;
+    // text-align: center;
+    // height: 70px;
+  }
+
+  .image {
+    // margin-top: 20px;
+    // border: 2px solid red;
+    // margin-left: 20px;
+
+    img {
+      width: 80px;
+      height: 120px;
+
+    }
+
+  }
+
+  .home-button {
+    // border: 2px solid rgb(0, 255, 128);
+    // display: flex;
+    // padding: 0;
+    // align-items: center;
+    // justify-content: sace-between;
+    margin-right: 10px;
+  }
+}
+
+
+@media (min-width: 992px) {
+
+  .page-container {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+
+}

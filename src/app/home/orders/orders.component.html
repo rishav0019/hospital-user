@@ -1,0 +1,141 @@
+<div class="wrapper">
+
+  <div class="container">
+
+
+
+    <div class="search-page-header" *ngIf="orders.length > 0">
+      <div class="header">
+        <h1>Order Details</h1>
+      </div>
+    </div>
+
+
+    <div class="order-details" *ngIf="orders.length > 0">
+      <div class="row">
+        <div class="col-md-12 col-xs-12">
+
+          <div class="table-container">
+            <table mat-table [dataSource]="dataSource">
+
+              <ng-container matColumnDef="description">
+                <mat-header-cell *matHeaderCellDef>Booking Id</mat-header-cell>>
+                <mat-cell *matCellDef="let element">
+                  <span class="mobile-label">Domains:</span>
+                  {{element.bookingId}}
+                </mat-cell>
+              </ng-container>
+
+
+              <ng-container matColumnDef="amount">
+                <mat-header-cell *matHeaderCellDef>Patient Name</mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                  <span class="mobile-label">Amount:</span>
+                  {{element.patientName}}
+                </mat-cell>
+              </ng-container>
+
+              <ng-container matColumnDef="email">
+                <mat-header-cell *matHeaderCellDef>Mobile Number</mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                  <span class="mobile-label">PayPal:</span>
+                  {{element.patientMobileNumber}}
+                </mat-cell>
+              </ng-container>
+
+              <ng-container matColumnDef="contact">
+                <mat-header-cell *matHeaderCellDef>Contact No.</mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                  <span class="mobile-label">Contact:</span>
+                  {{element.contact}}
+                </mat-cell>
+              </ng-container>
+
+
+              <ng-container matColumnDef="creationDate">
+                <mat-header-cell *matHeaderCellDef>Order Date</mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                  <span class="mobile-label">Date:</span>
+                  {{element.creationDate.seconds * 1000 | date:'dd MMM yyyy, hh:mm:ss aa'}}
+                </mat-cell>
+              </ng-container>
+
+              <ng-container matColumnDef="status">
+                <mat-header-cell *matHeaderCellDef>Status</mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                  <span class="mobile-label">Status:</span>
+                  {{element.bookingStatus}}
+                </mat-cell>
+              </ng-container>
+
+              <ng-container matColumnDef="showDetails">
+                <mat-header-cell *matHeaderCellDef>Show Details</mat-header-cell>
+                <mat-cell *matCellDef="let element" (click)="showDetails(element)">
+                  <mat-icon>assignment</mat-icon>
+                </mat-cell>
+              </ng-container>
+
+              <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
+              <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+            </table>
+          </div>
+
+
+
+        </div>
+
+
+
+      </div>
+
+      <div class="row">
+        <!-- <div class="col-md-4 col-xs-12">
+          <a href="/order">
+            <span> View All Orders</span>
+            <fa-icon [icon]="faArrowRight" size="1x"></fa-icon>
+          </a>
+
+        </div> -->
+        <div class="col-md-4 col-xs-12">
+          <a href="">
+            <span>Home Page</span>
+            <!-- <fa-icon [icon]="faArrowRight" size="1x"></fa-icon> -->
+          </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 col-xs-12">
+          <a href="" (click)="logout()">
+            <span> Logout</span>
+            <!-- <fa-icon [icon]="faSignOutAlt" size="1x"></fa-icon> -->
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+    <div class="order-container" *ngIf="orders.length < 1">
+
+      <div class="empty-container">
+      </div>
+
+      <p>No Domain Ordered. <span><a href="/search">Explore Domains</a></span></p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+  </div>
+  <app-footer></app-footer>
+</div>

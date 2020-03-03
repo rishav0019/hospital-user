@@ -1,0 +1,56 @@
+<div class="page-container">
+  <div class="doctor-container row between-xs">
+    <div *ngFor="let doctor of doctors">
+      <div class="col doctors-home card">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="heading">
+              <p class="name">{{ doctor.name }}</p>
+              <p class="speciality">{{ doctor.speciality }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="row ">
+          <div class="col-xs-4 image">
+            <!-- <div class="box"> -->
+            <img src="{{ doctor.subsImage.url }}" />
+
+            <!-- </div> -->
+
+          </div>
+          <div class="col-xs-8 doctor-details">
+            <li>{{ doctor.degree }}</li>
+            <li>{{ doctor.yearOfExperience }} Years Of Experience</li>
+            <li>{{ doctor.city }}, {{ doctor.state }}</li>
+            <li>Consultation Fee -{{ doctor.consultationFee }}</li>
+            <span>Availabel On -</span>
+            <span *ngFor="let day of doctor.availableOn" class="available-on">{{ day }}
+            </span>
+          </div>
+        </div>
+        <div class="row bottom-x home-button">
+          <div class="col-xs-6">
+            <div class="row center-xs">
+              <div class="col-xs-12">
+                <button mat-raised-button color="warn" class="box" (click)="viewDetails(doctor.id)">
+                  View Details
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6">
+            <div class="row center-xs">
+              <div class="col-xs-12" class="submit-button">
+                <button mat-raised-button (click)="bookAppointment(doctor.id)">
+                  Book Appointment
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>

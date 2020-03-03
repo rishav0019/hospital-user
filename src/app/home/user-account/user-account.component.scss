@@ -1,0 +1,66 @@
+@import "../../../assets/styles/common.scss";
+
+
+
+.wrapper {
+  overflow-x: hidden;
+  font-family: Lato, Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+
+.account-details {
+
+  border-bottom: 1px solid #eee;
+  width: 80%;
+
+  height: 64px;
+
+  .header {
+    float: left;
+    display: block;
+
+    h1 {
+      margin-left: 16px;
+      font-size: 22px;
+      display: inline-block;
+      white-space: nowrap;
+      text-align: start;
+    }
+  }
+}
+
+.user-details {
+  margin-top: 20px;
+  margin-bottom: 20vh;
+  // font-size: 2rem;
+
+
+
+  .viewall-order span {
+    font-size: 1.2rem;
+    margin-top: 128px;
+  }
+
+  .logout {
+    font-size: 1.3rem;
+    margin-top: 30px;
+  }
+
+
+
+}
+
+.full-width {
+  width: 100%;
+}
+
+.action-buttons button {
+  // margin-top: 20px;
+  margin-right: 20px;
+  background-color: #f2fbfdbe;
+}
+
+.rodio-button span {
+  margin-right: 10px;
+}
